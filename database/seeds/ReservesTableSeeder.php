@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ReservesTableSeeder extends Seeder
 {
@@ -12,13 +13,13 @@ class ReservesTableSeeder extends Seeder
     public function run()
     {
         $param = [
-            
-            "person_id" => "taro",
-            "member" =>"aaa",
-            "checkIn" => "111",
-            "checkOut" => "111"
+            //"id" => "123",
+            "person_id" => "123",
+            "member" =>"123",
+            "checkIn" => "2018-01-01",
+            "checkOut" => "2018-01-02"
         ];
-        DB::table('reseves')->insert($param);
+        DB::table('reserves')->insert($param);
 
         
     }
