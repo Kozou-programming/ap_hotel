@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\support\Facades\DB;
 
 class KindsTableSeeder extends Seeder
 {
@@ -11,6 +12,11 @@ class KindsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $param = [
+            "kindsId" => 1,
+            "typeName" =>"single",
+            "numberOfPeople" => 1
+        ];
+        DB::table('kinds')->insert($param);
     }
 }
